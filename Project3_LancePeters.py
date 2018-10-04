@@ -3,6 +3,7 @@
 #Programming Project #3: Farmer John's Field
 #Oct, 6, 2018
 import turtle
+import math
 
 window = turtle.Screen()
 windowTitle = "Project 3"
@@ -13,9 +14,9 @@ c1 = turtle.Turtle()
 sq = turtle.Turtle()
 
 def drawSpeed():
-    c4.speed(10)
-    c1.speed(10)
-    sq.speed(10)
+    c4.speed(100)
+    c1.speed(100)
+    sq.speed(100)
 drawSpeed()
 
 def drawCircle1():
@@ -51,4 +52,8 @@ def drawSq():
         sq.write(z)
 drawSq()
 
+sqSide = float(input("Square Side (Real Number): "))
+quarterSize = (1 / 4) * math.pi * sqSide ** 2 / 4
+area = quarterSize / 4
+print(area // 1, " Inner Circle Area")
 window.exitonclick()
