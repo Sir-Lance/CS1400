@@ -1,3 +1,8 @@
+#Lance Peters
+#CS1400
+#MrAbrahasmTeng
+#Excercise10
+
 import csv
 
 with open('station.csv') as f:
@@ -38,13 +43,13 @@ if answer2 == "y":
     output.write(genji_needs_a_buff)
 else:
     print("skipped...")
-
+#part 3 (encode)
+genji_needs_a_buff = str(hanzo_got_nerfed)
 answer3 = input("Encode drainage-area.txt? y or n?")
 if answer3 == "y":
     output2 = open("drainage-area-avg.txt", "r")
     temp = []
     for character in genji_needs_a_buff:
-        temp.append(char(ord(character)+3))
-        temp = ''.join(temp)
+        temp.append(ord(character)+3)
         yeet = open("fileciphertext.txt", "w")
-        yeet.write(temp)
+        yeet.write(str(temp))
